@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.add-detail{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    color: blue;
+}
+
+.form-control{
+    width: 300px;
+    border: 1px solid blue;
+}
+
+h1{
+    color: blue;
+}
+
+.check-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}  
+
+.form-check{
+    margin: 10px;
+    
+}
