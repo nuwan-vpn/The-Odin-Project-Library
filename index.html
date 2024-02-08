@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Library</h1>
-    <form action="" method="post" class="">
+    <form action="" method="post" id="new-book-form" style="display: none;">
         <div class="add-detail">
             <label for="title">Title:</label>
             <input class="form-control" type="text" placeholder="e.g. The Mysterious Affair at Styles" id="title" name="title">
@@ -24,19 +24,20 @@
             <label for="pages">Pages:</label>
             <input class="form-control" type="text" placeholder="e.g. 224" id="pages" name="pages">
         </div>   
-    </form> 
-    <div class="check-box">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="read" checked>
-            <label class="form-check-label" for="read">Read</label>
+    
+        <div class="check-box">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="read" checked>
+                <label class="form-check-label" for="read">Read</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="notRead" checked>
+                <label class="form-check-label" for="notRead">Not yet read</label>
+            </div>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="notRead" checked>
-            <label class="form-check-label" for="notRead">Not yet read</label>
-        </div>
-    </div>
+    </form>
     <div class="btn">
-        <button type="button" class="btn btn-primary">ADD NEW BOOK</button>
+        <button type="button" class="btn btn-primary" id="new-book-btn">ADD NEW BOOK</button>
     </div>
 </body>
 </html>
