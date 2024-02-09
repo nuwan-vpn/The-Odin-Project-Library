@@ -43,3 +43,29 @@ h1{
     align-items: center;
 }
 
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: blue;
+}
+
+.card h5 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: blue;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: blue;
+}
