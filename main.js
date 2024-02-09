@@ -16,9 +16,19 @@ function addBookToLibrary() {
     let pages = document.querySelector("#pages").value;
     let read = document.querySelector("#read").checked;
     // let notRead = document.querySelector("#notRead").checked;
-    let newBook = new Book(title, author, pages, read)
-    
-    console.log(newBook);
+    let newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
+    render();
+}
+
+function render(){
+    let libraryEl = document.querySelector("#library");
+    for(let i=0; i< myLibrary.length; i++){
+        let book = myLibrary[i];
+        let bookEl = document.createElement("div");
+        bookEl.innerHTML = `<p>${book.title}</p>`;
+        libraryEl.appendChild(bookEl);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -31,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#new-book-form").addEventListener("submit", function(event){
         event.preventDefault();
         addBookToLibrary();
+        
     });
     
 });
