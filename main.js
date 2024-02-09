@@ -23,6 +23,7 @@ function addBookToLibrary() {
 
 function render(){
     let libraryEl = document.querySelector("#library");
+    libraryEl.innerHTML = "";
     for(let i=0; i< myLibrary.length; i++){
         let book = myLibrary[i];
         let bookEl = document.createElement("div");
