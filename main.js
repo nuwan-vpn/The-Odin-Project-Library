@@ -32,10 +32,16 @@ function render(){
             <h5>by ${book.author}</h3>
             <p>pages:${book.pages}</p>
             <p>${book.read ? "Read":"Not yet read"}</p>
+            <button class="btn btn-primary" onClick = "removeBook(${i})">Remove</button>
         </div>
         `;
         libraryEl.appendChild(bookEl);
     }
+}
+
+function removeBook(index){
+    myLibrary.splice(index,1);
+    render();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
