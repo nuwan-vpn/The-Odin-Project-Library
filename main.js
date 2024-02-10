@@ -5,8 +5,16 @@ function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
-   
+    this.read = read;   
+}
+
+Book.prototype.toogleRead = function(){
+    this.read = !this.read;
+}
+
+function toogleRead(index){
+    myLibrary[index].toogleRead();
+    render();
 }
 
 
@@ -33,6 +41,7 @@ function render(){
             <p>pages:${book.pages}</p>
             <p>${book.read ? "Read":"Not yet read"}</p>
             <button class="btn btn-primary" onClick = "removeBook(${i})">Remove</button>
+            <button class="btn btn-warning" onClick = "toogleRead(${i})">Toogle Read</button>
         </div>
         `;
         libraryEl.appendChild(bookEl);
